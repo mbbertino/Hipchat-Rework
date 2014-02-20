@@ -29,7 +29,7 @@
 
         <div class="container">
             <div class="header">
-                <h3 class="text-muted">Yard Talk</h3>
+                <h3>Yard Talk</h3>
             </div>
 
             <div class="jumbotron">
@@ -39,36 +39,21 @@
                 <br>
                 <br>
                 <br>
-                <input class="username-login" placeholder="username..."></input>
-                <button class="login-btn btn btn-default">Login</button>
+                <input class="username-login js-username-login" placeholder="username..."></input>
+                <button class="login-btn btn btn-default js-login-btn">Login</button>
             </div>
                 <!-- <img class="img-responsive" src="http://cdn1.sbnation.com/entry_photo_images/8695469/8f54ed819732badc8cd3e9fdba223d30_large_verge_medium_landscape.jpg"> -->
 
-            <div class="row content">
+            <div class="row content hidden js-content">
                 <div class="main col-lg-12">
                     <div class="sidebar col-lg-4">
 <!--  -->
 <!-- Start of Sidebar User Panel -->
 <!--  -->
-                        <div class="user-panel">
-                            <div class="user-name-title col-lg-12">
-                                <h2>Austin</h2>
-                            </div>
-                            <div class="user-stats col-lg-12">
-                                <ul>
-                                    <li class="user-msg-stats">Messages</li>
-                                    <li class="user-last-msg pull-right">Last Msg</li>
-                                </ul>
-                                <ul>
-                                    <li class="user-msg-info badge pull-left">500</li>
-                                    <li class="user-msg-info badge pull-right">2:35pm</li>
-                                </ul>
-                            </div>
-                            <div class="message-panel">
-                                <textarea class="msg-input col-lg-12"></textarea>
-                                <button class="submit-btn btn btn-default">Submit</button>
-                            </div>
+                        <div class="user-panel js-user-panel">
+
                         </div>
+
 <!--  -->
 <!-- End of Sidebar User Panel -->
 <!--  -->
@@ -109,35 +94,31 @@
                 </div>
             </div>
 
-            <div class="footer">
-                <p></p>
-            </div>
 
         </div>
 
         <script type="text/template" id="user-template">
-            <div class="user-panel">
-                <div class="user-name-title col-lg-12">
-                    <h2>Austin</h2>
-                </div>
-                <div class="user-stats col-lg-12">
-                    <ul>
-                        <li class="user-msg-stats">Messages</li>
-                        <li class="user-last-msg pull-right">Last Msg</li>
-                    </ul>
-                    <ul>
-                        <li class="user-msg-info badge pull-left">500</li>
-                        <li class="user-msg-info badge pull-right">2:35pm</li>
-                    </ul>
-                </div>
-                <div class="message-panel">
-                    <textarea class="msg-input col-lg-12"></textarea>
-                </div>
+            <div class="user-name-title col-lg-12">
+                <h2><%= username %></h2>
+            </div>
+            <div class="user-stats col-lg-12">
+                <ul>
+                    <li class="user-msg-stats">Messages</li>
+                    <li class="user-last-msg pull-right">Last Msg</li>
+                </ul>
+                <ul>
+                    <li class="user-msg-info badge pull-left">500</li>
+                    <li class="user-msg-info badge pull-right">2:35pm</li>
+                </ul>
+            </div>
+            <div class="message-panel">
+                <textarea class="msg-input col-lg-12" placeholder="<%= messageText %>"></textarea>
+                <button class="submit-btn btn btn-default js-submit-btn">Submit</button>
             </div>
         </script>
 
         <script type="text/template" id="friend-template">
-            <div class="friend col-lg-12">
+             <div class="friend col-lg-12">
                 <div class="avatar-window col-lg-3">
                     <img class="avatar" src="">
                 </div>
@@ -145,7 +126,7 @@
                     <div class="friend-name col-lg-12">Matt</div>
                     <div class="friend-lastmsg col-lg-12">Last Msg: 2:25pm</div>
                 </div>
-             </div>
+            </div>
         </script>
 
         <script type="text/template" id="message-template">
@@ -154,7 +135,7 @@
                     <div class="message-name badge">Matt</div>
                     <div class="timestamp pull-right badge">2:15pm</div>
                 </div>
-                <p class="message-copy"></p>
+                <p class="message-copy">Gastropub direct trade Odd Future cardigan, fap leggings wayfarers art party ethnic 3 wolf moon. Bicycle rights Etsy mixtape bitters. Etsy deep v umami distillery semiotics. Before they sold out XOXO Schlitz Austin disrupt authentic. Etsy hella Odd Future seitan.</p>
             </div>
         </script>
 
@@ -162,6 +143,8 @@
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/underscore/underscore.js"></script>
+        <script src="bower_components/backbone/backbone.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -192,6 +175,11 @@
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
+        <!-- // <script src="scripts/friendview.js"></script> -->
+        <!-- // <script src="scripts/messageview.js"></script> -->
+        <script src="scripts/userview.js"></script>
+        <script src="scripts/messagemodel.js"></script>
+
         <!-- endbuild -->
 </body>
 </html>
