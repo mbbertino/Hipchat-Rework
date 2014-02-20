@@ -39,33 +39,117 @@
 
             <div class="jumbotron">
                 <h1>'Allo, 'Allo!</h1>
-                <p class="lead">Always a pleasure scaffolding your apps.</p>
-                <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
             </div>
 
-            <div class="row marketing">
-                <div class="col-lg-6">
-                    <h4>HTML5 Boilerplate</h4>
-                    <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
+            <div class="row content">
+                <div class="main col-lg-12">
+                    <div class="sidebar col-lg-4">
+<!--  -->
+<!-- Start of Sidebar User Panel -->
+<!--  -->
+                        <div class="user-panel">
+                            <div class="user-name-title col-lg-12">
+                                <h2>Austin</h2>
+                            </div>
+                            <div class="user-stats col-lg-12">
+                                <ul>
+                                    <li class="user-msg-stats">Messages</li>
+                                    <li class="user-last-msg pull-right">Last Msg</li>
+                                </ul>
+                                <ul>
+                                    <li class="user-msg-info badge pull-left">500</li>
+                                    <li class="user-msg-info badge pull-right">2:35pm</li>
+                                </ul>
+                            </div>
+                            <div class="message-panel">
+                                <textarea class="msg-input col-lg-12"></textarea>
+                                <button class="submit-btn btn btn-default">Submit</button>
+                            </div>
+                        </div>
+<!--  -->
+<!-- End of Sidebar User Panel -->
+<!--  -->
+                        <div class="friends-panel">
+                            <div class="friends-title">
+                                <h4>Friends</h4>
+                            </div>
+                            <div class="friends-list">
+                                <div class="friend col-lg-12">
+                                    <div class="avatar-window col-lg-3">
+                                        <img class="avatar" src="">
+                                    </div>
+                                    <div class="friend-info col-lg-9">
+                                        <div class="friend-name col-lg-12">Matt</div>
+                                        <div class="friend-lastmsg col-lg-12">Last Msg: 2:25pm</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                    <h4>Sass with Compass</h4>
-                    <p>Compass is an open-source CSS Authoring Framework that uses Sass.</p>
-
-
-                    <h4>Bootstrap</h4>
-                    <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-
-                    <h4>Modernizr</h4>
-                    <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
-
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="maincontent">
+                            <div class="main-title">Scuttlebutt</div>
+                            <div class="message-item">
+                                <div class="msg-item-info">
+                                    <div class="message-name badge">Matt</div>
+                                    <div class="timestamp pull-right badge">2:15pm</div>
+                                </div>
+                                <p class="message-copy">Gastropub direct trade Odd Future cardigan, fap leggings wayfarers art party ethnic 3 wolf moon. Bicycle rights Etsy mixtape bitters. Etsy deep v umami distillery semiotics. Before they sold out XOXO Schlitz Austin disrupt authentic. Etsy hella Odd Future seitan.</p>
+                            </div>
+                        </div>     
+                    </div>
                 </div>
             </div>
 
             <div class="footer">
-                <p>♥ from the Yeoman team</p>
+                <p></p>
             </div>
 
         </div>
+
+        <script type="text/template" id="user-template">
+            <div class="user-panel">
+                <div class="user-name-title col-lg-12">
+                    <h2>Austin</h2>
+                </div>
+                <div class="user-stats col-lg-12">
+                    <ul>
+                        <li class="user-msg-stats">Messages</li>
+                        <li class="user-last-msg pull-right">Last Msg</li>
+                    </ul>
+                    <ul>
+                        <li class="user-msg-info badge pull-left">500</li>
+                        <li class="user-msg-info badge pull-right">2:35pm</li>
+                    </ul>
+                </div>
+                <div class="message-panel">
+                    <textarea class="msg-input col-lg-12"></textarea>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/template" id="friend-template">
+            <div class="friend col-lg-12">
+                <div class="avatar-window col-lg-3">
+                    <img class="avatar" src="">
+                </div>
+                <div class="friend-info col-lg-9">
+                    <div class="friend-name col-lg-12">Matt</div>
+                    <div class="friend-lastmsg col-lg-12">Last Msg: 2:25pm</div>
+                </div>
+             </div>
+        </script>
+
+        <script type="text/template" id="message-template">
+            <div class="message-item">
+                <div class="msg-item-info">
+                    <div class="message-name badge">Matt</div>
+                    <div class="timestamp pull-right badge">2:15pm</div>
+                </div>
+                <p class="message-copy"></p>
+            </div>
+        </script>
 
 
         <!-- build:js scripts/vendor.js -->

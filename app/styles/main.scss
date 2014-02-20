@@ -57,6 +57,168 @@ body {
     }
 }
 
+
+.content {
+    position: relative;
+    height: auto;
+
+
+    .main {
+        height: auto;
+        padding: 10px;
+
+        .sidebar {
+
+            .user-panel{
+                overflow: hidden;
+                position: relative;
+                margin: 20px 0;
+                border-radius: 6px;
+                height: auto;
+                background: #e67e22;
+                
+                .user-name-title {
+                    background: #303030;
+                    color: #fff;
+                    position: relative;
+                    height: 125px;
+                    border-bottom: 1px solid gray;
+                    text-align: center;
+                }
+
+                .user-stats {
+                    background: #fff;
+                    position: relative;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    height: auto;
+                    border-bottom: 1px solid gray;
+
+                    ul  {
+                        position: relative;
+                        padding-left: 0px;
+                        margin-bottom: 0;
+                        li{
+                            font-size: 12px;
+                            display: inline;
+                            list-style: none;
+                        }
+                    }
+                }
+                
+                .message-panel {
+                    text-align: center;
+                    padding: 0 10px ;
+
+                    .msg-input {
+                        height: 25px;
+                        border-radius: 6px;
+                        margin-top: 10px;
+
+                        &:focus {
+                            height: 75px;
+                        }
+                    }
+
+                    .submit-btn {
+                        margin: 5px 0;
+                        font-size: 12px;
+                        height: 20px;
+                        padding: 0 10px;
+                    }
+
+                }
+
+            }
+
+            .friends-panel {
+                position: relative;
+                border-radius: 6px;
+                height: 300px;
+                border: 1px dashed black;
+
+                .friends-title {
+                    border-bottom: 1px solid black;
+                }
+
+                .friends-list{
+
+                    .friend {
+                        padding: 0 0;
+                        height: 50px;
+                        text-align: center;
+                        border-bottom: 1px solid black;
+
+                        .avatar-window {
+                            border-right: 1px solid black;
+                            height: 100%;
+
+
+
+                            .avatar {
+                                border-radius: 35px;
+                                height: 35px;
+                                width: 35px;
+                                border: 1px solid white;
+                                margin: 5px 0 0px -8px;
+
+                            }
+                        }
+
+                        .friend-info {
+                            height: 100%;
+                            color: black;
+                            position: relative;
+
+                            .friend-name {
+                                top: 10px;
+                            }
+
+                            .friend-lastmsg {
+                                font-size: 10px;
+                                bottom: -15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .maincontent {
+            height: 625px;
+            border-radius: 6px;
+            margin: 20px 0;
+
+            .main-title {
+                background: #303030;
+                color: #fff;
+                border-radius: 6px 6px 0 0;
+                text-transform: uppercase;
+                border-bottom: 1px solid black;
+                margin-bottom: 5px;
+                font-size: 20px;
+                padding-left: 10px;
+
+            }
+            .message-item {
+                border-bottom: 1px solid black;
+                padding: 10px;
+
+                .msg-item-info {
+                    background: rgba(128, 128, 128, 0.18);
+                    border-radius: 10px;
+                    height: auto;
+                }
+
+                p {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+ 
+}
+
 /* Supporting marketing content */
 .marketing {
     margin: 40px 0;
