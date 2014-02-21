@@ -33,13 +33,13 @@ var UserView = Backbone.View.extend({
 		var newMessage = new Message({
 			messageText: msgText,
 			username: uName,
-			messageDate: new Date(_.now()).toLocaleTimeString()
 		});
 
 		messages.add(newMessage);
 		new MessageView({model: newMessage});
 		newMessage.save();
 
+		convertDates();
 		$('.js-msg-input').val("Write your message here");
 	}
 })

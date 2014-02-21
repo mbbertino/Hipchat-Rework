@@ -117,14 +117,20 @@
 
         <script type="text/template" id="message-template">
             <div class="message-item">
-                <div class="msg-item-info">
-                    <div class="message-name badge"><%= username %></div>
-                    <div class="timestamp pull-right badge"><%= messageDate %></div>
+                <div class="msg-item-info <%= appId %>">
+                    <div class="message-name badge pull-left"><%= username %></div>
+                    <div class="timestamp js-timestamp pull-right badge"><%= messageDate %></div>
                 </div>
                 <p class="message-copy"><%= messageText %></p>
+
             </div>
         </script>
 
+<!-- ironchat -->
+<!-- TimeBandits -->
+<!-- ChipHatApp -->
+<!-- Team BCH -->
+<!-- Yard Talk -->
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->

@@ -5,8 +5,7 @@ $(document).ready(function(){
 	 messages.fetch({
         success: function(){
           messages.each(function(item){
-            new MessageView({model: item});
-            new FriendView({model: item})
+            new preLoadedMessageView({model: item});
           })
         },
         error: function(){

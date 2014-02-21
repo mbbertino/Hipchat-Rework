@@ -3,7 +3,7 @@ var Message = Backbone.Model.extend({
 		
 		"username": "Inmate #9",
 		"messageText": "Write your message here",
-		"messageDate": new Date(_.now()).toLocaleTimeString(),
+		"messageDate": _.now(),
 		"appId": "Yard Talk",
 		"options": {} 
 	}
