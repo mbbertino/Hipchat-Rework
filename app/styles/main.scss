@@ -11,7 +11,7 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 /* Space out content a bit */
 body {
-    background: #9EABB2;
+    background: #868686;
     padding-bottom: 20px;
 }
 
@@ -25,9 +25,15 @@ body {
 
 /* Custom page header */
 .header {
-    border-radius: 0 0 6px 6px;
     background: #303030;
     text-align: center;
+    background: #E57442;
+    height: 10px;
+    border-bottom: 2px solid #303030; 
+    .head-logo {
+        width: 300px;
+        height: auto;
+    }
     /* Make the masthead heading the same height as the navigation */
     h3 {
         margin-top: 0;
@@ -51,27 +57,39 @@ body {
 
 /* Main marketing message and sign up button */
 .jumbotron {
+    margin: 50px 10px 0;
     text-align: center;
     border-bottom: 1px solid #e5e5e5;
     background: #303030;
     color: #fff;
 
-    .username-login {
-        display: block;
-        border-radius: 6px;
-        margin: 0 auto 10px;
-        padding-left: 10px;
-        border: none;
+    .main-logo {
+        margin: 0 auto 40px;
     }
-    .login-btn {
-        margin: 0 auto;
-        padding: 10px;
-        display: block;
-        height: auto;
-        background: #E57442;
-        border: none;
-        color: white;
 
+    .input-group {
+        margin: 0 auto;
+        padding: 0 115px;
+
+        .username-login {
+            border-radius: 6px 0 0 6px ;
+            width: 100%;
+            padding-left: 10px;
+            border: none;
+            border-bottom: 2px solid #fff;
+            
+        }
+        .big-group-btn{
+            height: 100%;
+
+            .login-btn {
+                padding: 15px;
+                background: #E57442;
+                border: none;
+                color: white;
+
+            }
+        }
     }
 }
 
@@ -79,6 +97,7 @@ body {
 .content {
     position: relative;
     height: auto;
+    margin-top: 20px;
 
 
     .main {
@@ -86,14 +105,19 @@ body {
         padding: 10px;
 
         .sidebar {
+            position: relative;
 
             .user-panel{
+                box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.66);
                 overflow: hidden;
-                position: relative;
+                position: absolute;
                 margin: 20px 0;
                 border-radius: 6px;
                 height: auto;
+                width: 90.5%;
                 background: #E57442;
+                z-index: 5;
+
                 
                 .user-name-title {
                     background: #303030;
@@ -126,6 +150,7 @@ body {
                 }
                 
                 .message-panel {
+                    position: relative;
                     text-align: center;
                     padding: 0 10px ;
 
@@ -133,10 +158,13 @@ body {
                         height: 25px;
                         border-radius: 6px;
                         margin-top: 10px;
+                        resize:none;
+                        // overflow-y: hidden; 
 
-                        &:focus {
-                            height: 75px;
-                        }
+                    }
+
+                    .expand {
+                        height: 75px;
                     }
 
                     .submit-btn {
@@ -152,16 +180,17 @@ body {
             }
 
             .friends-panel {
+                margin-top: 280px; 
                 background: #fff;
                 overflow: hidden;
                 position: relative;
                 border-radius: 6px;
-                height: 300px;
+                height: 365px;
 
                 .friends-title {
                     background: #303030;
                     color: #fff; 
-                    border-bottom: 1px solid black;
+                    border-bottom: 2px solid #E57442;
 
                     h4 {
                         margin: 0px 0;
@@ -170,7 +199,7 @@ body {
                 }
 
                 .friends-list{
-                    height: 275px;
+                    height: 340px;
                     overflow-y: scroll; 
 
                     .friend {
@@ -226,7 +255,7 @@ body {
                 color: #fff;
                 border-radius: 6px 6px 0 0;
                 text-transform: uppercase;
-                border-bottom: 1px solid black;
+                border-bottom: 2px solid #E57442;
                 font-size: 20px;
                 padding-left: 10px;
 
@@ -268,7 +297,7 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .container {
-        max-width: 730px;
+        max-width: 960px;
     }
 
     /* Remove the padding we set earlier */

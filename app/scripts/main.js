@@ -2,7 +2,6 @@ $(document).ready(function(){
 
 	window.messages = new MessagesCollection();
 
-
 	$('.jumbotron').on('click', '.js-login-btn', function() {
 		$('.js-content').toggleClass("hidden");
 		$('.jumbotron').toggleClass("hidden");
