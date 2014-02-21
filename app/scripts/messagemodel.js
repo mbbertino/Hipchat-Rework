@@ -12,5 +12,7 @@ var Message = Backbone.Model.extend({
 var MessagesCollection = Backbone.Collection.extend({
 	model: Message,
 
-	url: 'https://tiny-pizza-server.herokuapp.com'
+	url: 'http://tiny-pizza-server.herokuapp.com/collections/messages'
+	// is this what we need to do below?
+	// url: 'http://tiny-pizza-server.herokuapp.com/collections/messages'
 });

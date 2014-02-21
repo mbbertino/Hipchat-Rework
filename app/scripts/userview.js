@@ -21,7 +21,6 @@ var UserView = Backbone.View.extend({
 	},
 
 	expandField: function(){
-			console.log("worked");
 			$('.js-msg-input').toggleClass("expand");
 	},
 
@@ -31,12 +30,16 @@ var UserView = Backbone.View.extend({
 		var msgText = $('.js-msg-input').val();
 		var uName = $('.user-name-title').find('h2').html();
 
-		var newUser = new Message({
+		var newMessage = new Message({
 			messageText: msgText,
 			username: uName,
 			messageDate: new Date(_.now()).toLocaleTimeString()
 		});
 
-		new MessageView({model: newUser}) 
+		messages.add(newMessage);
+		new MessageView({model: newMessage});
+		newMessage.save();
+
+		$('.js-msg-input').val("Write your message here");
 	}
 })

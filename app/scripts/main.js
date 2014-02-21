@@ -2,6 +2,18 @@ $(document).ready(function(){
 
 	window.messages = new MessagesCollection();
 
+	 messages.fetch({
+        success: function(){
+          messages.each(function(item){
+            new MessageView({model: item});
+            new FriendView({model: item})
+          })
+        },
+        error: function(){
+            console.log('Error with messages.fetch!')
+        }
+    })
+
 	$('.jumbotron').on('click', '.js-login-btn', function() {
 		$('.js-content').toggleClass("hidden");
 		$('.jumbotron').toggleClass("hidden");
@@ -11,7 +23,7 @@ $(document).ready(function(){
 		var newUser = new Message({
 			username: userName
 		});
-
+		
 		new UserView({model: newUser}) 
 	});
 })

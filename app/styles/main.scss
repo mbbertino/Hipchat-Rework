@@ -25,11 +25,13 @@ body {
 
 /* Custom page header */
 .header {
+    margin-bottom: 0px;
     background: #303030;
     text-align: center;
     background: #E57442;
     height: 10px;
     border-bottom: 2px solid #303030; 
+
     .head-logo {
         width: 300px;
         height: auto;
@@ -310,7 +312,7 @@ body {
 
     /* Space out the masthead */
     .header {
-        margin-bottom: 30px;
+        margin-bottom: 0px;
     }
     
     /* Remove the bottom border on the jumbotron for visual effect */

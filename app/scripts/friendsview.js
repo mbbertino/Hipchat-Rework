@@ -5,7 +5,7 @@ var FriendView = Backbone.View.extend({
 	createTemplate: _.template($("#friend-template").text()),
 
 	initialize: function(){
-		$('.js-friend-list').prepend(this.el);
+		$('.js-friends-list').prepend(this.el);
 		this.render();
 	},
 
