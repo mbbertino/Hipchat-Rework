@@ -116,7 +116,7 @@
                 </div>
                 <div class="friend-info col-lg-9">
                     <div class="friend-name col-lg-12"><%= username %></div>
-                    <div class="friend-lastmsg col-lg-12">Last Msg: <%= messageDate %></div>
+                    <div class="js-friend-timestamp friend-lastmsg col-lg-12"><%= messageDate %></div>
                 </div>
             </div>
         </script>
@@ -174,11 +174,11 @@
         <!-- endbuild -->
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/main.js"></script>
+        <script src="scripts/messagemodel.js"></script>
         <script src="scripts/friendsview.js"></script>
         <script src="scripts/messageview.js"></script>
         <script src="scripts/userview.js"></script>
-        <script src="scripts/messagemodel.js"></script>
+        <script src="scripts/main.js"></script>
 
         <!-- endbuild -->
 </body>

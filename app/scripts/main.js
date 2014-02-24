@@ -1,17 +1,22 @@
+
 $(document).ready(function(){
 
-	window.messages = new MessagesCollection();
+window.messages = new MessagesCollection();
 
-	 messages.fetch({
-        success: function(){
-          messages.each(function(item){
-            new preLoadedMessageView({model: item});
-          })
-        },
-        error: function(){
-            console.log('Error with messages.fetch!')
-        }
-    })
+	setInterval(function() {
+		messages.fetch({
+			success: function(collection) {
+				$('.js-message-list').empty(),
+				messages.each(function(newMessage){
+					new preLoadedMessageView({model: newMessage})
+				})
+				console.log('fetching')
+			},
+			error: function(collection, error) {
+				console.log(error.description);
+			}
+		});
+	}, 10000)
 
 	$('.jumbotron').on('click', '.js-login-btn', function() {
 		$('.js-content').toggleClass("hidden");
@@ -26,3 +31,5 @@ $(document).ready(function(){
 		new UserView({model: newUser}) 
 	});
 })
+
+

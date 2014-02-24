@@ -39,7 +39,6 @@ var UserView = Backbone.View.extend({
 		new MessageView({model: newMessage});
 		newMessage.save();
 
-		convertDates();
 		$('.js-msg-input').val("Write your message here");
 	}
 })

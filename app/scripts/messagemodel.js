@@ -12,7 +12,20 @@ var Message = Backbone.Model.extend({
 var MessagesCollection = Backbone.Collection.extend({
 	model: Message,
 
-	url: 'http://tiny-pizza-server.herokuapp.com/collections/messages'
+	url: 'http://tiny-pizza-server.herokuapp.com/collections/messages',
 	// is this what we need to do below?
 	// url: 'http://tiny-pizza-server.herokuapp.com/collections/messages'
+  
+ initialize: function() {
+  console.log('initializing collection');
+  	// this.listenTo(this, "save", function(newMessage){
+	    
+	  //   new MessageView({ model: newMessage });
+  	// });
+
+  		// listenTo(this, "add", function(newMessage){
+    // console.log('collection heard "ADD" event fired on itself', newMessage);
+
+  // } );
+ },
 });
