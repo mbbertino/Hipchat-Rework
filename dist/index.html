@@ -1,0 +1,185 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>hipchat rework</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+        <div class="header">
+        </div>
+        <div class="container">
+
+            <div class="jumbotron">
+                <img class="img-responsive main-logo"src="images/mainlogo.svg">
+                <div class="row">
+                    <div class="input-group col-lg-12">
+                        <input class="username-login js-username-login" placeholder="username..."></input>
+                        <span class="input-group-btn big-group-btn">
+                            <button class="login-btn btn btn-default js-login-btn">Login</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+                <!-- <img class="img-responsive" src="http://cdn1.sbnation.com/entry_photo_images/8695469/8f54ed819732badc8cd3e9fdba223d30_large_verge_medium_landscape.jpg"> -->
+
+            <div class="row content hidden js-content">
+                <div class="main col-lg-12">
+                    <div class="sidebar col-lg-4">
+<!--  -->
+<!-- Start of Sidebar User Panel -->
+<!--  -->
+                        <div class="user-panel js-user-panel">
+                            <!-- this is where the user-template gets prepended -->
+                        </div>
+
+<!--  -->
+<!-- End of Sidebar User Panel -->
+<!--  -->
+                        <div class="friends-panel">
+                            <div class="friends-title">
+                                <h4>Friends</h4>
+                            </div>
+                            <div class="friends-list js-friends-list">
+                                <!-- this is where the friend-template gets prepended -->
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="maincontent">
+                            <div class="main-title">Scuttlebutt</div>
+                            <div class="message-list js-message-list">
+                                <!-- this is where the message-template gets prepended -->
+                            </div>
+                        </div>     
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <script type="text/template" id="user-template">
+            <div class="user-name-title col-lg-12">
+                <h2><%= username %></h2>
+            </div>
+            <div class="user-stats col-lg-12">
+                <ul>
+                    <li class="user-msg-stats">Messages</li>
+                    <li class="user-last-msg pull-right">Last Msg</li>
+                </ul>
+                <ul>
+                    <li class="user-msg-info badge pull-left">500</li>
+                    <li class="user-msg-info badge pull-right">2:35pm</li>
+                </ul>
+            </div>
+            <div class="message-panel">
+                <textarea class="js-msg-input msg-input col-lg-12" placeholder="<%= messageText %>"></textarea>
+                <button class="submit-btn btn btn-default js-submit-btn">Submit</button>
+            </div>
+        </script>
+
+
+
+
+
+<!-- trying to assign friend color based on appid -->
+
+        <script type="text/template" id="friend-template">
+             <div class="friend col-lg-12">
+                <div class="avatar-window col-lg-3">
+                    <div class="avatar <%= appId %>"></div>
+                </div>
+                <div class="friend-info col-lg-9">
+                    <div class="friend-name col-lg-12"><%= username %></div>
+                    <div class="js-friend-timestamp friend-lastmsg col-lg-12"><%= messageDate %></div>
+                </div>
+            </div>
+        </script>
+
+<!-- trying to assign friend color based on app id -->
+
+        <script type="text/template" id="message-template">
+            <div class="message-item">
+                <div class="msg-item-info <%= appId %>">
+                    <div class="message-name badge pull-left"><%= username %></div>
+                    <div class="timestamp js-timestamp pull-right badge"><%= messageDate %></div>
+                </div>
+                <p class="message-copy"><%= messageText %></p>
+
+            </div>
+        </script>
+
+<!-- ironchat -->
+<!-- TimeBandits -->
+<!-- ChipHatApp -->
+<!-- Team BCH -->
+<!-- Yard Talk -->
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/underscore/underscore.js"></script>
+        <script src="bower_components/backbone/backbone.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+
+        <!-- build:js scripts/plugins.js -->
+        <script src="bower_components/sass-bootstrap/js/affix.js"></script>
+        <script src="bower_components/sass-bootstrap/js/alert.js"></script>
+        <script src="bower_components/sass-bootstrap/js/dropdown.js"></script>
+        <script src="bower_components/sass-bootstrap/js/tooltip.js"></script>
+        <script src="bower_components/sass-bootstrap/js/modal.js"></script>
+        <script src="bower_components/sass-bootstrap/js/transition.js"></script>
+        <script src="bower_components/sass-bootstrap/js/button.js"></script>
+        <script src="bower_components/sass-bootstrap/js/popover.js"></script>
+        <script src="bower_components/sass-bootstrap/js/carousel.js"></script>
+        <script src="bower_components/sass-bootstrap/js/scrollspy.js"></script>
+        <script src="bower_components/sass-bootstrap/js/collapse.js"></script>
+        <script src="bower_components/sass-bootstrap/js/tab.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/messagemodel.js"></script>
+        <script src="scripts/friendsview.js"></script>
+        <script src="scripts/messageview.js"></script>
+        <script src="scripts/userview.js"></script>
+        <script src="scripts/main.js"></script>
+
+        <!-- endbuild -->
+</body>
+</html>
