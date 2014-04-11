@@ -1,6 +1,3 @@
-
-Messaging App Class Homework
-
 #Yard Talk
 
 ###This is a class homework that let us get familiar with hooking into a server.
